@@ -1,0 +1,749 @@
+:root {
+    --primary-color:rgb(59, 59, 59);
+    --secondary-color: rgb(255, 255, 255);
+    --tertiary-color: rgba(8, 121, 165, 1);
+    --black-transparent: rgba(0, 0, 0, 0.7);
+    --hauteur_header: 90px;
+    --hauteur_footer: 500px;
+    --padding_left_right: 1vw;
+}
+
+
+
+/*MOBILE FIRST*/
+
+/*Réinisialiter les styles par defaut des navigateurs*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Définision du style des éléments background-color et font-family*/
+body {
+    background-color: var(--secondary-color);
+    font-family: "Roboto", sans-serif;
+}
+
+/*Effacer le style par defaut des éléments a*/
+a {
+    text-decoration: none;
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+/*Effacer le style par defaut des éléments ol et ul*/
+ol, ul {
+    list-style: none;
+}
+
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+/*------------------HEADER---------------------------*/
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+
+/*Définition du alteur et coleur du fond*/
+.header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 5px rgba(60, 60, 60, 0.5);
+    height: var(--hauteur_header);
+    background-color: var(--primary-color);
+}
+
+/*Le style du conteneur navbar*/
+.navbar {
+    height: 100%; /*pour occuper tout l'hauteur du header*/
+    display: flex; /*Positioner les éléments les uns au coté des autres*/
+    justify-content: space-between; /*Éloigner les éléments les uns des autres*/
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right); /*Padding du 0 par top et bottom, et de 2 par left et right*/
+}
+
+.logo-size {
+  height: 90%;
+  object-fit: scale-down;
+  align-content: center;
+}
+
+.logo {
+    height: 70%;
+    object-fit: scale-down;
+}
+
+/*Cacher l'élément check-box, sont les éléments de notre menu*/
+.menu_burger {
+    display: none;
+}
+
+/*Captamos el elemento por su ID, cuando el check-box esté en estado checked*/
+/*el signo + significa que el elemento al lado (ul_links, en este caso) será modificado*/
+/*En este caso, para asignar la altura al elemento ul_links*/
+/*Se utiliza una función para calcular la altura, la operación es la siguiente:*/
+/*Queremos que mida el 100% de la altura de la ventana menos la altura del header*/
+.menu_burger:checked+.ul_links {
+    height: calc(40vh - var(--hauteur_header));
+    min-height: 100px;
+    max-width: 600px;
+}
+
+/* .label_burger {
+} */
+
+/*Le da un color blanco al icono hamburguer               */
+.list_icon {
+    color: var(--couleur_blanc);
+    cursor: pointer; /* indica que el elemento es clicable */
+}
+
+/*Des options du menu*/
+.ul_links {
+    width: 200px;
+    max-width: 500px;
+    max-height: 200px;
+    background-color: var(--black-transparent);
+    color: var(--secondary-color);
+    position: absolute;
+    /*el elemento  ul_links comienza abajo del header*/
+    top: var(--hauteur_header);
+    /*sin espacio a la izquierda*/
+    right: 0;
+    /*sin espacio arriba*/
+    height: 0;
+    /*Cacher la list quand est pas check*/
+    overflow: hidden;
+    /* ----------------->height: calc(100vh - var(--altura_header)); */
+    /*Type de conteneur*/
+    display: flex;
+    /*Positioner les éléments en colonne*/
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-right: 1rem;
+    gap: 1rem;
+    /*anima la transición otorgándole una cantidad de tiempo para cambiar de un estado al otro*/
+    transition: all .3s;
+}
+
+/*options menu text container*/
+ /* .li_links {
+
+ } */
+
+
+/*Donner le style aux liens du menu*/
+.link {
+    font-size: 1,5em;
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 1,5em;
+    margin: 1em 0;
+}
+
+.link:hover {
+    background-color: var(--primary-color);
+}
+
+.link_child {
+    font-size: 1,3em;
+    color: var(--secondary-color);
+    font-weight: lighter;
+    padding: 3px;
+}
+
+.link_child:hover {
+    background-color: var(--primary-color);
+}
+
+
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+/*------------------TOP BUTTON-----------------------*/
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+
+
+.link-top-button {
+  position: fixed;
+  bottom: 0;
+}
+
+.img-top-button {
+  width: 50px;
+  padding: 10px;
+}
+
+
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+/*------------------MISE EN PAGE---------------------*/
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+
+
+/* .container_index {
+} */
+
+.container_index_brk2 {
+  display: none;
+}
+
+.title1_index {
+  display: flex;
+  font-size: 2.5rem;
+  justify-content: center;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 10px;
+}
+
+.description_container {
+  background-color: var(--primary-color);
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.title2_index {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  font-weight: 550;
+  padding: 5px;
+}
+
+.text_description {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 50;
+  line-height: 1.5rem;
+  padding: 10px 15px;
+}
+
+.artist_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--primary-color);
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.left_column_artist {
+  height: 100%;
+  object-fit: fill;
+}
+
+.title3_index {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  padding: 5px;
+}
+
+.text_artist {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  font-weight: 200;
+  line-height: 1.3rem;
+  padding: 10px;
+  max-height: 100%;
+}
+
+.right_column_artist {
+  height: 100%;
+}
+
+.videos_index {
+  display: none;
+}
+
+.videos_index_brk1 {
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+  padding: 10px;
+}
+
+.artist_container_3fr {
+  display: none;
+}
+
+.container_index_brk2 {
+  display: none;
+}
+
+
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+/*------------------FOOTER---------------------------*/
+/*---------------------------------------------------*/
+/*---------------------------------------------------*/
+
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+  background-color: var(--primary-color);
+
+}
+
+.nav_footer {
+  justify-items: center;
+  padding: 2rem 0;
+}
+
+.nav_footer_brk2 {
+  display: none;
+}
+
+.section_footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60vw;
+  padding: 10px;
+  justify-content: center;
+  transition: all .4s;
+} 
+
+.portraits_footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  width: 100%;
+  max-height: 30vh;
+  min-height: 160px;
+  object-fit: cover;
+  background-position-y: top;
+  background-position-x: top;
+}
+ 
+.ul_links_footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* border: 1px solid green; */
+  padding-left: 10px;
+}
+
+/* .li_links_footer { */
+/*} */
+
+.link_footer {
+  font-size: 1,5em;
+  color: var(--secondary-color);
+  font-weight: bold;
+  padding: 1,5em;
+}
+
+ .li_links_footer {
+  display: flex;
+  padding: 0px;
+}
+
+.link_footer:hover {
+  background-color: var(--primary-color);
+}
+
+.link_child_footer {
+  font-size: 1,3em;
+  color: var(--secondary-color);
+  font-weight: lighter;
+  padding: 3px;
+}
+
+.link_child_footer:hover {
+  background-color: var(--primary-color);
+}
+
+    /*---------------------------------------------------*/
+    /*---------------------------------------------------*/
+    /*------------------MEDIA QUERIES--------------------*/
+    /*---------------------------------------------------*/
+    /*---------------------------------------------------*/
+
+/*Écrans entre 426px et 1024px*/
+    @media only screen and (min-width: 426px) and (max-width: 1025px) {
+
+
+              /*---------------Header section------------*/
+              .header {
+                height: 120px;
+                background-color: var(--primary-color);
+                transition: all .4s;
+              }
+
+              /*contruction de list de pages de notre site web*/
+              .ul_links {
+                position: static;
+                width: auto;
+                height: auto;
+                flex-direction: row;
+                gap: .1rem;
+                background-color: var(--primary-color);
+            }
+          
+              .link {
+                  font-size: 1rem;
+                  transition: all .4s;
+                  padding: .2rem .4rem;
+              }
+          
+              .link:hover {
+                  background-color: var(--black-transparent);
+              }
+          
+
+              .label_burger {
+                  display: none;
+              }
+
+              .menu_burger {
+                  display: none;
+              }
+
+              
+              /*-------------Top button---------*/
+              
+              .img-top-button {
+                width: 55px;
+                padding: 10px;
+                transition: all .4s;
+              }
+
+            /*-------------Index sections---------*/
+
+            .container_index {
+              display: grid;
+              grid-template-columns: 1fr;
+              padding: 0 10vw;
+              align-self: center;
+            }
+
+            .title1_index {
+              display: flex;
+              font-size: 3.5rem;
+              justify-content: center;
+              color: var(--primary-color);
+              font-weight: 600;
+              padding: 10px;
+            }
+
+            .description_container {
+              justify-items: center;
+              background-color: var(--primary-color);
+              padding: 10px;
+              margin: 20px;
+              border-radius: 10px;
+            }
+
+            .title2_index {
+              font-size: 2rem;
+              color: var(--secondary-color);
+              font-weight: 550;
+              line-height: 30px;
+              padding: 15px;
+            }
+
+            .text_description {
+              color: var(--secondary-color);
+              font-size: 1rem;
+              line-height: 28px;
+              font-weight: 200;
+              line-height: 2rem;
+              padding: 15px;
+            }
+
+            .artist_container {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              background-color: var(--primary-color);
+            }
+
+            .left_column_artist {
+              height: 100%;
+              object-fit: fill;
+            }
+
+            .title3_index {
+              font-size: 1.7rem;
+              font-weight: 600;
+              color: var(--secondary-color);
+              padding: 10px;
+            }
+
+            .text_artist {
+              color: var(--secondary-color);
+              font-size: 1rem;
+              font-weight: 200;
+              line-height: 2rem;
+              padding: 15px;
+              max-height: 100%;
+            }
+
+            .right_column_artist {
+              height: 100%;
+            }
+
+            .videos_index_brk1 {
+              width: 100%;
+              height: 100%;
+              object-fit: fill;
+              padding: 15px;
+            }
+
+            .videos_index {
+              display: none;
+            }
+
+            .artist_container_3fr {
+              display: none;
+            }
+
+            .container_index_brk2 {
+              display: none;
+            }
+
+    }
+
+          
+/*---------------------*/
+/*Écrans minimum 1025px*/
+/*---------------------*/
+    @media only screen and (min-width: 1025px) {
+
+              /*------------Header section------------*/
+              .header {
+                height: 150px;
+                background-color: var(--primary-color);
+                transition: all .4s;
+              }
+
+              .ul_links {
+                position: static;
+                width: auto;
+                height: auto;
+                flex-direction: row;
+                gap: .1rem;
+                margin: 0 10px;
+                background-color: var(--primary-color);
+              }
+          
+              .link {
+                  font-size: 1.5rem;
+                  transition: all .4s;
+                  padding: .2rem .5rem;
+              }
+          
+              .link:hover {
+                  background-color: var(--black-transparent);
+              }
+          
+
+              .label_burger {
+                  display: none;
+              }
+
+              .menu_burger {
+                  display: none;
+              }
+
+
+              /*-------------Top button---------*/
+
+              .img-top-button {
+                width: 60px;
+                padding: 10px;
+                transition: all .4s;
+              }
+
+
+            /*-------------Index sections---------*/
+
+            .container_index {
+              display: none;
+            }
+            
+            .container_index_brk2 {
+              display: grid;
+              grid-template-columns: 1fr;
+              padding: 0 5vw;
+              align-self: center;
+            }
+
+            .title1_index {
+              display: flex;
+              font-size: 2.5rem;
+              justify-content: center;
+              color: var(--primary-color);
+              font-weight: 600;
+              padding: 10px;
+            }
+
+            .description_container {
+              justify-items: center;
+              background-color: var(--primary-color);
+              padding: 10px;
+              margin: 20px;
+              border-radius: 10px;
+            }
+
+            .title2_index {
+              font-size: 1.5rem;
+              color: var(--secondary-color);
+              font-weight: 550;
+              line-height: 30px;
+              padding: 5px;
+            }
+
+            .text_description {
+              color: var(--secondary-color);
+              font-size: 1rem;
+              line-height: 1.7rem;
+              font-weight: 200;
+              line-height: 2rem;
+              padding: 15px;
+            }
+
+            .artist_container_3fr {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+            }
+
+            .artist_container {
+              display: grid;
+              grid-template-columns: 1fr;
+              background-color: var(--primary-color);
+            }
+
+            .left_column_artist {
+              height: 100%;
+              object-fit: fill;
+            }
+
+            .title3_index {
+              font-size: 1.3rem;
+              font-weight: 600;
+              color: var(--secondary-color);
+              padding: 10px;
+            }
+
+            .text_artist {
+              color: var(--secondary-color);
+              font-size: 1rem;
+              font-weight: normal;
+              line-height: 1.5rem;
+              padding: 15px;
+              max-height: 100%;
+            }
+
+            .right_column_artist {
+              height: 100%;
+            }
+
+            .videos_index_brk1 {
+              width: 100%;
+              height: 100%;
+              object-fit: fill;
+              padding: 15px;
+            }
+
+            .videos_index {
+              display: none;
+            }
+
+
+            /*-------------Footer section---------*/
+
+            .nav_footer_brk2 {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              justify-items: center;
+              padding: 2rem 0;
+            }
+
+            .nav_footer {
+              display: none;
+            }
+
+            .section_footer {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              width: 30vw;
+              padding: 10px;
+              justify-content: center;
+              transition: all .4s;
+            } 
+    }

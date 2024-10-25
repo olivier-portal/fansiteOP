@@ -1,0 +1,429 @@
+:root {
+    --primary-color:rgb(59, 59, 59);
+    --secondary-color: rgb(255, 255, 255);
+    --tertiary-color: rgba(8, 121, 165, 1);
+    --black-transparent: rgba(0, 0, 0, 0.7);
+    --hauteur_header: 90px;
+    --hauteur_footer: 150px;
+    --padding_left;
+}
+.ul_link_kombi{
+
+
+width: 200px;
+max-width: 500px;
+background-color: var(--black-transparent);
+color: var(--secondary-color);
+position: absolute;
+/*el elemento  ul_links comienza abajo del header*/
+top: var(--hauteur_header);
+/*sin espacio a la izquierda*/
+right: 0;
+/*sin espacio arriba*/
+height: 0;
+/*Cacher la list quand est pas check*/
+overflow: hidden;
+/* ----------------->height: calc(100vh - var(--altura_header)); */
+/*Type de conteneur*/
+display: flex;
+/*Positioner les éléments en colonne*/
+flex-direction: column;
+justify-content: space-around;
+align-items: flex-end;
+padding-right: 1rem;
+gap: 1rem;
+/*anima la transición otorgándole una cantidad de tiempo para cambiar de un estado al otro*/
+transition: all .3s;
+}
+.li_links{
+    font-size: 1,5em;
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 1,5em;
+}
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.cover-title{
+    color: rgb(255, 255, 255);
+    
+}
+.main-title {
+    position: absolute;
+    font-size: larger;
+    bottom:10%;
+    right: 10%;
+
+    transform: translate(10%, 50%);
+    color: aliceblue;
+    border: 3px solid rgb(30, 30, 30);
+    background-color: var(--black-transparent);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.head{
+    .album1.......................
+}
+
+.un {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.photo{
+        top: 90px;
+        text-align: right;
+        font: larger;
+        border: 3px solid rgb(5, 4, 4);
+        height: calc(100vh - var(--hauteur_header));
+}
+    
+.photo-img{
+        object-fit: cover;
+        width:100%;
+        border: 3px solid rgb(10, 11, 9);
+        height: calc(100vh - var(--hauteur_header));
+        
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    color: rgb(61, 115, 155);
+}
+.un {
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: column;
+    color: rgb(17, 19, 21);
+}
+.photosmort{
+    display: flex;
+    justify-content: center;
+}
+.album1{
+    display: flex;
+    justify-content: center;
+}
+.album2{
+    display: flex;
+    justify-content: center;
+}
+.photo1{
+    display: flex;
+    justify-content: center;
+}
+.event1{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.event2{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.un{
+    display: flex;
+    justify-content: center;
+
+}
+.one{
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: medium;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: rgb(158, 158, 158);
+}
+.two{
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: small;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: rgb(158, 158, 158);
+}
+.three{
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: small;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: rgb(158, 158, 158);
+}
+.four{
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: small;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: rgb(158, 158, 158);
+}
+.five{
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: small;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: rgb(158, 158, 158);
+}
+.six{
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: small;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: rgb(158, 158, 158);
+}
+nav {
+   display: flex;
+   flex-direction: column;
+   left: 100px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(170, 7, 7);
+}
+/* Font Roboto */
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+
+/*MOBILE FIRST*/
+
+/*Réinisialiter les styles par defaut des navigateurs*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Effacer le style par defaut des éléments ol et ul*/
+ol, ul {
+    list-style: none;
+}
+
+/*Définition du alteur et coleur du fond*/
+.header {
+    height: var(--hauteur_header);
+    background-color: var(--primary-color);
+}
+
+/*Le style du conteneur navbar*/
+.navbar {
+    height: 100%; /*pour occuper tout l'hauteur du header*/
+    display: flex; /*Positioner les éléments les uns au coté des autres*/
+    justify-content: space-between; /*Éloigner les éléments les uns des autres*/
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 var(--padding_left_right); /*Padding du 0 par top et bottom, et de 2 par left et right*/
+}
+
+.logo {
+    height: 80%;
+    object-fit: scale-down;
+}
+
+/*Cacher l'élément check-box, sont les éléments de notre menu*/
+.menu_hamburguer {
+    display: none;
+    text-decoration: none;
+}
+
+/*Captamos el elemento por su ID, cuando el check-box esté en estado checked*/
+/*el signo + significa que el elemento al lado (ul_links, en este caso) será modificado*/
+/*En este caso, para asignar la altura al elemento ul_links*/
+/*Se utiliza una función para calcular la altura, la operación es la siguiente:*/
+/*Queremos que mida el 100% de la altura de la ventana menos la altura del header*/
+.menu_hamburguer:checked+.ul_links {
+    height: calc(40vh - var(--hauteur_header));
+    min-height: 400px;
+    max-width: 600px;
+}
+
+/* .label_hamburguer {
+
+
+} */
+
+/*Le da un color blanco al icono hamburguer               */
+.list_icon {
+    color: var(--secondary-color);
+    cursor: pointer; /* indica que el elemento es clicable */
+}
+
+/*Cacher l'élément check-box, sont les éléments de notre menu*/
+.menu_hamburguer {
+    display: none;
+}
+
+/*Captamos el elemento por su ID, cuando el check-box esté en estado checked*/
+/*el signo + significa que el elemento al lado (ul_links, en este caso) será modificado*/
+/*En este caso, para asignar la altura al elemento ul_links*/
+/*Se utiliza una función para calcular la altura, la operación es la siguiente:*/
+/*Queremos que mida el 100% de la altura de la ventana menos la altura del header*/
+.menu_hamburguer:checked+.ul_links_kombi {
+    height: calc(100vh - var(--hauteur_header));
+    min-height: 200px;
+    max-width: 600px;
+}
+
+/* .label_hamburguer {
+
+
+} */
+
+/*Le da un color blanco al icono hamburguer               */
+.list_icon {
+    color: var(--couleur_blanc);
+    cursor: pointer; /* indica que el elemento es clicable */
+}
+
+/*Des options du menu*/
+.ul_links_kombi {
+    width: 200px;
+    max-width: 500px;
+    background-color: var(--black-transparent);
+    color: var(--secondary-color);
+    position: absolute;
+    /*el elemento  ul_links comienza abajo del header*/
+    top: var(--hauteur_header);
+    /*sin espacio a la izquierda*/
+    right: 0;
+    /*sin espacio arriba*/
+    height: 0;
+    /*Cacher la list quand est pas check*/
+    overflow: hidden;
+    /* ----------------->height: calc(100vh - var(--altura_header)); */
+    /*Type de conteneur*/
+    display: flex;
+    /*Positioner les éléments en colonne*/
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-right: 1rem;
+    gap: 1rem;
+    /*anima la transición otorgándole una cantidad de tiempo para cambiar de un estado al otro*/
+    transition: all .3s;
+}
+
+/*options menu text container*/
+ /*.li_links {
+
+ }*/
+
+
+/*Donner le style aux liens du menu*/
+.link {
+    font-size: 1,5em;
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 1,5em;
+
+}
+
+.link:hover {
+    background-color: var(--primary-color);
+}
+
+.link_child {
+    font-size: 1,3em;
+    color: var(--secondary-color);
+    font-weight: lighter;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: var(--primary-color);
+}
+
+
+/*------------------------------------------*/
+
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    padding: 20px o;
+    color: var(--primary-color);
+}
