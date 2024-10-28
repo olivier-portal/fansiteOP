@@ -5,51 +5,122 @@
     --black-transparent: rgba(0, 0, 0, 0.7);
     --hauteur_header: 90px;
     --hauteur_footer: 150px;
-    --padding_left;
 }
 .ul_link_kombi{
-
-
-width: 200px;
-max-width: 500px;
-background-color: var(--black-transparent);
-color: var(--secondary-color);
-position: absolute;
-/*el elemento  ul_links comienza abajo del header*/
-top: var(--hauteur_header);
-/*sin espacio a la izquierda*/
-right: 0;
-/*sin espacio arriba*/
-height: 0;
-/*Cacher la list quand est pas check*/
-overflow: hidden;
-/* ----------------->height: calc(100vh - var(--altura_header)); */
-/*Type de conteneur*/
-display: flex;
-/*Positioner les éléments en colonne*/
-flex-direction: column;
-justify-content: space-around;
-align-items: flex-end;
-padding-right: 1rem;
-gap: 1rem;
-/*anima la transición otorgándole una cantidad de tiempo para cambiar de un estado al otro*/
-transition: all .3s;
+    width: 20px;
+    max-width: 200px;
+    background-color: var(--black-transparent);
+    color: var(--secondary-color);
+    position: absolute;
+    top: var(--hauteur_header);
+    right: 0;
+    height: 0;
+    /*Cacher la list quand est pas check*/
+        overflow: hidden;
+    /* ----------------->height: calc(100vh - var(--altura_header)); */
+    /*Type de conteneur*/
+    display: flex;
+    /*Positioner les éléments en colonne*/
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 1rem;
+    /*anima la transición otorgándole una cantidad de tiempo para cambiar de un estado al otro*/
+    transition: all .3s;
 }
 .li_links{
-    font-size: 1,5em;
+    
     color: var(--secondary-color);
     font-weight: bold;
-    padding: 1,5em;
 }
+/* Styles par défaut */
+.photosmort{
+    max-width: 100%;
+    height: auto;
 }
 body {
+    font-size: 16px;
+}
+ /*480px 1024px tab 1280px ordi*/
+/* Pour les écrans de moins de 600px */
+body {
+    background-color: rgb(170, 170, 170);
+
+}
+body{
     margin: 0px;
     padding: 0px;
+}
+.texte {
+    padding: 20px; /* Éloigne le texte de la bordure de son conteneur */
+    margin: 10px;  /* Éloigne le conteneur de la marge externe */
+    border: 1px solid #ccc; /* Juste pour visualiser le conteneur */
+    border-radius: 1em;
+}
+.texte2{
+    padding: 20px; /* Éloigne le texte de la bordure de son conteneur */
+    margin: 10px;  /* Éloigne le conteneur de la marge externe */
+    border: 1px solid #ccc; /* Juste pour visualiser le conteneur */
+    border-radius: 1em;
+
+}
+.event1{
+    padding: 20px; /* Éloigne le texte de la bordure de son conteneur */
+    margin: 10px;  /* Éloigne le conteneur de la marge externe */
+    border: 1px solid #ccc; /* Juste pour visualiser le conteneur */
+    border-radius: 1em;
+}
+.event2{
+    padding: 20px; /* Éloigne le texte de la bordure de son conteneur */
+    margin: 10px;  /* Éloigne le conteneur de la marge externe */
+    border: 1px solid #ccc; /* Juste pour visualiser le conteneur */
+    border-radius: 1em;
+}
+.photos{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+.photos{
+font-size: 1.5em;
+margin-bottom: 1em;
+color:#050505;
+display: flex;
+justify-content: center;
+align-items: baseline
+}
+.photo1{
+    padding: 20px; /* Éloigne le texte de la bordure de son conteneur */
+    margin: 10px;  /* Éloigne le conteneur de la marge externe */
+    border: 1px solid #ccc; /* Juste pour visualiser le conteneur */
+    border-radius: 1em;
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: large;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: aliceblue;
+
+}
+.photo2{
+    padding: 20px; /* Éloigne le texte de la bordure de son conteneur */
+    margin: 10px;  /* Éloigne le conteneur de la marge externe */
+    border: 1px solid #ccc; /* Juste pour visualiser le conteneur */
+    border-radius: 1em;
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: large;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: rgb(255, 255, 255);
 }
 .cover-title{
     color: rgb(255, 255, 255);
     
 }
+
 .main-title {
     position: absolute;
     font-size: larger;
@@ -63,9 +134,7 @@ body {
     padding: 10px 20px;
     border-radius: 10px;
 }
-.head{
-    .album1.......................
-}
+
 
 .un {
     display: flex;
@@ -79,7 +148,7 @@ body {
         border: 3px solid rgb(5, 4, 4);
         height: calc(100vh - var(--hauteur_header));
 }
-    
+
 .photo-img{
         object-fit: cover;
         width:100%;
@@ -102,14 +171,27 @@ h1 {
     display: flex;
     justify-content: center;
 }
+.photosmort1{
+    width: 150px;
+    height: 150px;
+}
 .album1{
-    display: flex;
-    justify-content: center;
+    width: 150px;
+    height: 150px;
 }
 .album2{
-    display: flex;
-    justify-content: center;
+    width: 150px;
+    height: 150px;
 }
+.album3{
+  width: 150px;
+  height: 150px;
+}
+.album4{
+  width: 150px;
+  height: 150px;
+}
+
 .photo1{
     display: flex;
     justify-content: center;
@@ -132,56 +214,188 @@ h1 {
 .one{
     border-style: hidden;
     border-radius: 1em;
-    font-size: medium;
+    font-size:large;
     box-sizing: border-box;
     margin: 0.7em;
     padding: 1em;
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(113, 108, 108);
 }
 .two{
     border-style: hidden;
     border-radius: 1em;
-    font-size: small;
+    font-size: large;
     box-sizing: border-box;
     margin: 0.7em;
     padding: 1em;
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(113, 108, 108);
 }
 .three{
     border-style: hidden;
     border-radius: 1em;
-    font-size: small;
+    font-size: large;
     box-sizing: border-box;
     margin: 0.7em;
     padding: 1em;
-    background-color: rgb(158, 158, 158);
-}
-.four{
-    border-style: hidden;
-    border-radius: 1em;
-    font-size: small;
-    box-sizing: border-box;
-    margin: 0.7em;
-    padding: 1em;
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(113, 108, 108);
+
 }
 .five{
     border-style: hidden;
     border-radius: 1em;
-    font-size: small;
+    font-size: large;
     box-sizing: border-box;
     margin: 0.7em;
     padding: 1em;
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(113, 108, 108);
 }
 .six{
     border-style: hidden;
     border-radius: 1em;
-    font-size: small;
+    font-size: large;
     box-sizing: border-box;
     margin: 0.7em;
     padding: 1em;
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(113, 108, 108);
+}
+.photos{
+    width: 20px;
+    height: 20px;
+}
+.fan1{
+  width: 110px;
+  height: 90px;
+}
+.fan2{
+  width: 110px;
+  height: 90px;
+}
+.fan3{
+  width: 110px;
+  height: 90px;
+}
+.rs{
+  width: 80%;
+  text-align: center;
+  margin: 5px;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color:#050505;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+
+}
+.imagers1{
+  width: 100px;
+  height: 150px;
+}
+.imagers2{
+  width: 100px;
+  height: 150px;
+}
+.realisations{
+    width: 100%;
+    background-color: rgb(113, 108, 108);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.realisations{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color:#050505;
+    display: flex;
+    align-items: baseline;
+}
+.album1{
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: large;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 0.5em;
+    background-color: rgb(248, 248, 248);
+}
+.album2{
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: large;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 0.5em;
+    background-color: rgb(248, 248, 248);
+}
+.album3{
+    border-style: hidden;
+    border-radius: 1em;
+    font-size: large;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 0.5em;
+    background-color: rgb(248, 248, 248);
+}
+.album4{
+  border-style: hidden;
+  border-radius: 1em;
+  font-size: large;
+  box-sizing: border-box;
+  margin: 0.7em;
+  padding: 0.5em;
+  background-color: rgb(248, 248, 248);
+}
+.pv{
+  display: flex;
+  justify-content: center;
+}
+.fan{
+    text-align: center;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+}
+.fan1{
+  border-style: hidden;
+  text-align: center;
+    border-radius: 1em;
+    font-size: small;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: rgb(242, 240, 240);
+
+}
+.fan2{
+    border-style: hidden;
+    text-align: center;
+    border-radius: 1em;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: rgb(255, 255, 255);
+
+}
+.fan3{
+  border-style: hidden;
+  text-align: center;
+    border-radius: 1em;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: rgb(255, 255, 255);
+
 }
 nav {
    display: flex;
@@ -277,8 +491,6 @@ nav {
 ol, ul {
     list-style: none;
 }
-
-/*Définition du alteur et coleur du fond*/
 .header {
     height: var(--hauteur_header);
     background-color: var(--primary-color);
@@ -348,6 +560,7 @@ ol, ul {
 
 } */
 
+
 /*Le da un color blanco al icono hamburguer               */
 .list_icon {
     color: var(--couleur_blanc);
@@ -379,9 +592,8 @@ ol, ul {
     padding-right: 1rem;
     gap: 1rem;
     /*anima la transición otorgándole una cantidad de tiempo para cambiar de un estado al otro*/
-    transition: all .3s;
-}
 
+}
 /*options menu text container*/
  /*.li_links {
 
@@ -414,6 +626,82 @@ ol, ul {
 }
 
 
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+  /* bottom: 0; */
+  /* height: var(--hauteur_footer); */
+  background-color: var(--primary-color);
+
+}
+
+.nav_footer {
+  justify-items: center;
+  padding: 2rem 0;
+  /* border: 4px solid red; */
+}
+
+.nav_footer_brk2 {
+  display: none;
+}
+
+.section_footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60vw;
+  padding: 10px;
+  /* border: 1px solid yellow; */
+  justify-content: center;
+} 
+
+.portraits_footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  width: 100%;
+  max-height: 30vh;
+  min-height: 160px;
+  object-fit: cover;
+  /* background-position: top; */
+  background-position-y: top;
+  background-position-x: top;
+  /* border: 2px solid red; */
+  /*We must find the solution for the align a right side in tablets and big screens*/
+}
+ 
+.ul_links_footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* border: 1px solid green; */
+  padding-left: 10px;
+}
+
+.link_footer {
+  font-size: 1,5em;
+  color: var(--secondary-color);
+  font-weight: bold;
+  padding: 1,5em;
+  margin: 1em 0;
+  /* border: 1px solid purple; */
+}
+
+.link_footer:hover {
+  background-color: var(--primary-color);
+}
+
+.link_child_footer {
+  font-size: 1,3em;
+  color: var(--secondary-color);
+  font-weight: lighter;
+  padding: 3px;
+  /* border: 1px solid orangered; */
+}
+
+.link_child_footer:hover {
+  background-color: var(--primary-color);
+}
+
 /*------------------------------------------*/
 
 
@@ -427,3 +715,176 @@ h1 {
     padding: 20px o;
     color: var(--primary-color);
 }
+ /*480px 1024px tab 1280px ordi*/
+
+ @media all and (min-width: 768px) and (max-width: 1599px) {
+
+    .header {
+      height: var(--hauteur_header_medium_size);
+    
+      li {
+        font-size: 2em;
+      }
+    }
+    
+    .label_hamburguer svg {
+      height: 90px;
+      width: 90px;
+    }
+    
+    .ul_links_kombi {
+      top: var(--hauteur_header_medium_size);
+    }
+    
+    .menu_hamburguer:checked+.ul_links_kombi {
+      height: calc(100vh - var(--hauteur_header_medium_size));
+      max-width: none;
+      width: fit-content;
+      padding-left: 20px;
+    }
+    
+    h2 {
+      font-size: 5em;
+    }
+    
+    p {
+      font-size: 2em;
+    }
+      
+    .cover-title{
+    
+      .main-title {
+        font-size: 2.8em;
+      }
+    
+    }
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr;
+      height: 100%;
+      /* bottom: 0; */
+      /* height: var(--hauteur_footer); */
+      background-color: var(--primary-color);
+    
+    }
+    
+    .nav_footer {
+      justify-items: center;
+      padding: 2rem 0;
+      /* border: 4px solid red; */
+    }
+    
+    .nav_footer_brk2 {
+      display: none;
+    }
+    
+    .section_footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 60vw;
+      padding: 10px;
+      /* border: 1px solid yellow; */
+      justify-content: center;
+    } 
+    
+    .portraits_footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+      width: 100%;
+      max-height: 30vh;
+      min-height: 160px;
+      object-fit: cover;
+      /* background-position: top; */
+      background-position-y: top;
+      background-position-x: top;
+      /* border: 2px solid red; */
+      /*We must find the solution for the align a right side in tablets and big screens*/
+    }
+     
+    .ul_links_footer {
+      display: grid;
+      grid-template-columns: 1fr;
+      /* border: 1px solid green; */
+      padding-left: 10px;
+    }
+    
+    .link_footer {
+      font-size: 1,5em;
+      color: var(--secondary-color);
+      font-weight: bold;
+      padding: 1,5em;
+      margin: 1em 0;
+      /* border: 1px solid purple; */
+    }
+    
+    .link_footer:hover {
+      background-color: var(--primary-color);
+    }
+    
+    .link_child_footer {
+      font-size: 1,3em;
+      color: var(--secondary-color);
+      font-weight: lighter;
+      padding: 3px;
+      /* border: 1px solid orangered; */
+    }
+    
+    .link_child_footer:hover {
+      background-color: var(--primary-color);
+    }
+    /* Style des différentes sections */
+    
+    .un {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        .rubrique {
+          padding: 0 20px; 
+    
+          .anchor-target {
+            padding-top: var(--hauteur_header); 
+            margin-top: -90px;
+      
+            /* Section des réalisations */
+      
+            .album1 {
+              flex-direction: row;
+            
+              .album2 {
+                width: 40vw;
+                margin: 0 10px;
+              }
+            }
+      
+            /* Section des photos et vidéos */
+      
+            .photos {
+              flex-direction: row;
+            }
+            
+            .pictures-photo {
+              width: 40vw;
+              margin: 0 10px;
+            }
+      
+            .fan {
+              flex-direction: row;
+              font-size: 5em;
+            }
+            /* Section réseaux sociaux */
+      
+            .rs {
+              .social-network {         
+                img {
+                  height: 90px;
+                }  
+              
+              }
+            }
+          }
+        }
+      }
+    }
+            
